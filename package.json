@@ -1,0 +1,93 @@
+{
+  "name": "ext-js-with-react-concept",
+  "product": "ext",
+  "version": "0.0.1",
+  "description": "my-ext-gen-app description for Ext JS app MyExtGenApp",
+  "scripts": {
+    "clean": "rimraf build",
+    "start": "cross-env-shell npm run dev",
+    "dev": "webpack-dev-server --env.environment=development",
+    "prod": "webpack-dev-server --env.environment=production --env.treeshake=true",
+    "build": "cross-env-shell npm run clean && cross-env webpack --env.environment=production --env.treeshake=true",
+    "desktop": "webpack-dev-server --env.profile=desktop --env.environment=development",
+    "desktop-v": "webpack-dev-server --env.profile=desktop --env.environment=development",
+    "build-desktop-testing": "npx sencha app build desktop testing",
+    "build-desktop-production": "npx sencha app build desktop production",
+    "createview": "cross-env-shell npx sencha generate viewpackage $npm_package_extbuild_defaultprofile $VIEW"
+  },
+  "extbuild": {
+    "defaultprofile": "desktop",
+    "defaultenvironment": "development",
+    "defaultverbose": "no"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/runtime": "^7.1.5",
+    "@sencha/ext": "~6.7.0",
+    "@sencha/ext-classic": "~6.7.0",
+    "@sencha/ext-classic-theme-graphite": "~6.7.0",
+    "@sencha/ext-classic-theme-triton": "~6.7.0",
+    "@sencha/ext-modern": "~6.6.0",
+    "@sencha/ext-modern-theme-material": "6.6.0",
+    "@sencha/ext-modern-theme-triton": "6.6.0",
+    "@sencha/ext-modern-treegrid": "6.6.0",
+    "@sencha/ext-react": "~6.6.3",
+    "@sencha/ext-react-renderercell": "~6.6.3",
+    "@sencha/ext-react-transition": "~6.6.3",
+    "miguelpalacio-atg-react-demo": "0.0.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-slick": "^0.24.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.6",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.1.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-2": "7.0.0",
+    "@sencha/ext-charts": "~6.6.0",
+    "@sencha/ext-react-babel-plugin": "~6.6.3",
+    "@sencha/ext-react-webpack-plugin": "6.6.0",
+    "@sencha/ext-webpack-plugin": "~6.7.0",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "2.1.0",
+    "file-loader": "1.1.6",
+    "html-webpack-plugin": "^3.2.0",
+    "portfinder": "^1.0.20",
+    "react-hot-loader": "^4.3.12",
+    "rimraf": "^2.6.2",
+    "style-loader": "0.23.1",
+    "url-loader": "0.6.2",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "keywords": [
+    "Ext JS",
+    "Sencha",
+    "HTML5"
+  ],
+  "author": "Sencha, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/"
+  },
+  "homepage": "http://www.sencha.com"
+}
