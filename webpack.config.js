@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtWebpackPlugin = require('@sencha/ext-webpack-plugin');
-// const ExtReactWebpackPlugin = require('@sencha/ext-react-webpack-plugin');
 const portfinder = require('portfinder');
 
 module.exports = async function (env) {
@@ -51,27 +50,14 @@ module.exports = async function (env) {
 				verbose: buildverbose
 			}),		
 
-			// new ExtReactWebpackPlugin({
-				// framework: 'extjs',
-				// port: port,
-				// // emit: true,
-				// browser: browserprofile,
-				// treeshake: treeshake,
-				// watch: watchprofile,
-				// profile: buildprofile, 
-				// environment: buildenvironment, 
-				// verbose: buildverbose
-
-				// ORIGINAL
-				// framework: 'react',
-				// port: port,
-				// profile: buildprofile,
-				// // theme: 'theme-triton',
-				// // theme: 'theme-material',
-				// // theme: 'atg-triton',
-				// environment: buildenvironment,
-				// verbose: buildverbose
-			// })
+			// new ExtWebpackPlugin({
+			// 	framework: 'react',
+			// 	toolkit: 'modern',
+			// 	port: port,
+			// 	profile: buildprofile,
+			// 	environment: buildenvironment,
+			// 	verbose: buildverbose
+			// }),
 		]
 		// if (!isProd) {
 		// 	plugins.push(
@@ -89,14 +75,14 @@ module.exports = async function (env) {
 				reactDependencies: './react-dependencies.js'
 			},
 			output: {
-				path: path.resolve(__dirname, './'),
+				path: path.resolve(__dirname, 'build'),
 				filename: '[name].js'
 			},
 			module: {
 				rules: [
 					{
 						test: /\.(js|jsx)$/,
-						exclude: /node_modules/,
+						// exclude: /node_modules/,
 						use: {
 							loader: 'babel-loader',
 							options: {
