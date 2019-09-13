@@ -59,11 +59,11 @@ module.exports = async function (env) {
 			// 	verbose: buildverbose
 			// }),
 		]
-		// if (!isProd) {
-		// 	plugins.push(
-		// 		new webpack.HotModuleReplacementPlugin()
-		// 	)
-		// }
+		if (!isProd) {
+			plugins.push(
+				new webpack.HotModuleReplacementPlugin()
+			)
+		}
 
 		return {
 			performance: { hints: false },
@@ -72,7 +72,7 @@ module.exports = async function (env) {
 			context: path.join(__dirname, './'),
 			entry: {
 				main: "./app.js",
-				reactDependencies: './react-dependencies.js'
+				'react-dependencies': './react-src/react-dependencies.js'
 			},
 			output: {
 				path: path.resolve(__dirname, 'build'),

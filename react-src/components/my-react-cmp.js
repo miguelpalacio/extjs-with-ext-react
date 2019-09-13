@@ -3,16 +3,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-class MySecondCmp extends Component {
-	render() {
-		const settings = {
-			dots: true,
-			infinite: true,
-			speed: 500,
-			slidesToShow: 1,
-			slidesToScroll: 1
-		};
+class MyReactCmp extends Component {
 
+	settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	}
+
+	render() {
 		return (
 			<div>
 				<p><b>React</b></p>
@@ -20,7 +21,7 @@ class MySecondCmp extends Component {
 
 				<div>
 					<h2>React Slick Slider</h2>
-					<Slider {...settings}>
+					<Slider {...this.settings}>
 						<div>
 							<h3>1</h3>
 						</div>
@@ -46,4 +47,4 @@ class MySecondCmp extends Component {
 	}
 }
 
-export default MySecondCmp;
+export default MyReactCmp;

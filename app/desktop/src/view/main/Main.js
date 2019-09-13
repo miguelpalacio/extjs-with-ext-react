@@ -22,11 +22,6 @@ Ext.define('ExtJSWithReactConcept.view.main.Main', {
 	// Properties
 	//-----------------------------------
 
-	// controller: 'mainVC',
-	// viewModel: {
-	// 	type: 'mainVM'
-	// },
-
 	layout: 'hbox',
 
 	//-----------------------------------
@@ -36,10 +31,6 @@ Ext.define('ExtJSWithReactConcept.view.main.Main', {
 	title: 'ExtJS With React',
 
 	iconCls: 'x-fa fa-calendar-check-o',
-
-	//-----------------------------------
-	// Bottom toolbar
-	//-----------------------------------
 
 	//-----------------------------------
 	// App Content
@@ -72,34 +63,10 @@ Ext.define('ExtJSWithReactConcept.view.main.Main', {
 			xtype: 'component',
 			listeners: {
 				afterrender: cmp => {
-					// const { React, ReactDOM, MyReactCmp, ReactDOMRender } = window.myVars;
-
-					// const e = React.createElement;
-
-					// ReactDOM.render(
-					// 	// e(<MyReactCmp />, null, 'ReactJS Component'),
-					// 	MyReactCmp(),
-					// 	cmp.el.dom
-					// );
-
 					const { ReactDOMRender } = window.myVars;
 					ReactDOMRender('MyReactCmp', cmp.el.dom);
 				}
 			}
 		},
-	],
-
-	//-----------------------------------
-	// Constructor: used to set up options dynamically on app load
-	//-----------------------------------
-
-	// constructor: function (config) {
-	// 	config.bodyPadding = config.testing ? '0 6 0 6' : '0';
-
-	// 	this.callParent([config]);
-	// },
-
-	//-----------------------------------
-	// Listener
-	//-----------------------------------
+	]
 });
